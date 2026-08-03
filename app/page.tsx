@@ -1,0 +1,196 @@
+const solutions = [
+  {
+    number: "01",
+    title: "Robotic welding",
+    text: "MIG, TIG and laser welding cells engineered for repeatable quality, higher throughput and safer production.",
+  },
+  {
+    number: "02",
+    title: "Machine tending",
+    text: "Reliable CNC, press and process-machine loading systems built around your actual cycle and floor layout.",
+  },
+  {
+    number: "03",
+    title: "Handling & assembly",
+    text: "Purpose-built pick-and-place, material handling, gluing and assembly cells that keep production moving.",
+  },
+  {
+    number: "04",
+    title: "Painting & cutting",
+    text: "Integrated robotic painting, coating and 3D cutting applications for consistent finishes and complex parts.",
+  },
+];
+
+const projects = [
+  {
+    image: "/automated-welding.jpeg",
+    title: "Automated welding cell",
+    tag: "MIG / TIG WELDING",
+    className: "project-wide",
+  },
+  {
+    image: "/machine-tending-cell.jpeg",
+    title: "CNC machine tending",
+    tag: "MACHINE TENDING",
+    className: "project-tall",
+  },
+  {
+    image: "/robotic-welding-cell.jpeg",
+    title: "Precision component welding",
+    tag: "ROBOTIC WELDING",
+    className: "",
+  },
+  {
+    image: "/robot-handling-cell.jpeg",
+    title: "Material handling cell",
+    tag: "HANDLING",
+    className: "",
+  },
+];
+
+export default function Home() {
+  return (
+    <main>
+      <header className="site-header">
+        <a className="brand" href="#top" aria-label="Kiaan Robotics home">
+          <img src="/kiaan-robotics-logo.png" alt="Kiaan Robotics and automation solutions" />
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="#solutions">Solutions</a>
+          <a href="#projects">Projects</a>
+          <a href="#company">Company</a>
+        </nav>
+        <a className="header-cta" href="#contact">Discuss a project <span>↗</span></a>
+      </header>
+
+      <section className="hero" id="top">
+        <img src="/automated-welding.jpeg" alt="Yaskawa industrial robot welding a steel assembly" />
+        <div className="hero-shade" />
+        <div className="hero-content">
+          <p className="eyebrow"><span /> Industrial automation, built around you</p>
+          <h1>We make<br />production <em>move.</em></h1>
+          <p className="hero-copy">Turnkey robotic cells, integration and field support—from first concept to a production-ready system.</p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#projects">Explore our work <span>↓</span></a>
+            <a className="text-link" href="tel:+919429587411">Talk to an engineer <span>↗</span></a>
+          </div>
+        </div>
+        <div className="hero-stats" aria-label="Company highlights">
+          <div><strong>50<sup>+</sup></strong><span>Projects delivered</span></div>
+          <div><strong>24<sup>/7</sup></strong><span>Service support</span></div>
+          <div><strong>01</strong><span>Turnkey partner</span></div>
+        </div>
+      </section>
+
+      <section className="intro" id="company">
+        <p className="section-kicker">What we do</p>
+        <div className="intro-copy">
+          <h2>Automation that works<br /><span>on your floor.</span></h2>
+          <p>We design, build and support robotic systems for demanding manufacturing environments. Every cell starts with your part, process and production target—not a standard template.</p>
+          <a className="inline-arrow" href="#solutions">See our capabilities <span>↗</span></a>
+        </div>
+      </section>
+
+      <section className="solutions" id="solutions">
+        <div className="section-heading">
+          <p className="section-kicker light">Core solutions</p>
+          <h2>From process<br />to production.</h2>
+        </div>
+        <div className="solution-list">
+          {solutions.map((solution) => (
+            <article key={solution.number}>
+              <span className="solution-number">{solution.number}</span>
+              <h3>{solution.title}</h3>
+              <p>{solution.text}</p>
+              <span className="solution-icon" aria-hidden="true">↗</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="work" id="projects">
+        <div className="work-heading">
+          <div>
+            <p className="section-kicker">Selected work</p>
+            <h2>Built for the<br /><span>real world.</span></h2>
+          </div>
+          <p>Real systems. Real production environments. Designed, integrated and supported by the Kiaan Robotics team.</p>
+        </div>
+        <div className="project-grid">
+          {projects.map((project) => (
+            <article className={`project ${project.className}`} key={project.title}>
+              <img src={project.image} alt={project.title} />
+              <div className="project-overlay">
+                <span>{project.tag}</span>
+                <h3>{project.title}</h3>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="process">
+        <div className="process-image">
+          <img src="/production-welding-cell.jpeg" alt="Kiaan Robotics welding cell in production" />
+          <span>Production-ready systems</span>
+        </div>
+        <div className="process-copy">
+          <p className="section-kicker light">One accountable team</p>
+          <h2>Concept.<br />Commission.<br /><em>Keep running.</em></h2>
+          <ol>
+            <li><span>01</span><div><b>Engineer</b><p>Process study, concept, simulation and cell design.</p></div></li>
+            <li><span>02</span><div><b>Integrate</b><p>Build, programming, testing and on-site commissioning.</p></div></li>
+            <li><span>03</span><div><b>Support</b><p>Training, breakdown support, maintenance and upgrades.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section className="leadership" id="leadership">
+        <div className="leadership-portrait">
+          <img src="/jaydeep-champaneri.jpeg" alt="Jaydeep Champaneri, CEO of Kiaan Robotics" />
+          <div className="leader-label">
+            <span>Jaydeep Champaneri</span>
+            <small>Chief Executive Officer</small>
+          </div>
+        </div>
+        <div className="leadership-copy">
+          <p className="section-kicker">Leadership</p>
+          <h2>Engineering confidence,<br /><span>from the factory floor.</span></h2>
+          <p>Under Jaydeep Champaneri’s leadership, Kiaan Robotics brings practical automation engineering, responsive service and long-term accountability to every customer engagement.</p>
+          <div className="leadership-values">
+            <div><b>Practical</b><span>Solutions shaped by real production needs</span></div>
+            <div><b>Accountable</b><span>One team from concept through support</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="partners" aria-label="Technology partners">
+        <p>Technology experience across</p>
+        <div><b>YASKAWA</b><b>FANUC</b><b>KAWASAKI</b><b>MIGATRONIC</b><b>BINZEL</b></div>
+      </section>
+
+      <section className="contact" id="contact">
+        <div>
+          <p className="section-kicker light">Have a process to automate?</p>
+          <h2>Let’s build what<br />your line needs.</h2>
+        </div>
+        <div className="contact-card">
+          <p>Tell us about the part, process or production challenge. Our team will help define the right automation approach.</p>
+          <a className="button button-dark" href="mailto:kiaan.robotics@gmail.com">Start a conversation <span>↗</span></a>
+          <div className="contact-details">
+            <a href="tel:+919429587411">+91 94295 87411</a>
+            <a href="mailto:kiaan.robotics@gmail.com">kiaan.robotics@gmail.com</a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <a className="brand footer-brand" href="#top">
+          <img src="/kiaan-robotics-logo.png" alt="Kiaan Robotics and automation solutions" />
+        </a>
+        <p>Ahmedabad, Gujarat, India</p>
+        <p>© 2026 Kiaan Robotics</p>
+      </footer>
+    </main>
+  );
+}
