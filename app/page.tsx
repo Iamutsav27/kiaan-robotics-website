@@ -49,11 +49,14 @@ const projects = [
 ];
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const asset = (path: string) => `${basePath}${path}`;
+
   return (
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Kiaan Robotics home">
-          <img src="/kiaan-robotics-logo.png" alt="Kiaan Robotics and automation solutions" />
+          <img src={asset("/kiaan-robotics-logo.png")} alt="Kiaan Robotics and automation solutions" />
         </a>
         <nav aria-label="Main navigation">
           <a href="#solutions">Solutions</a>
@@ -64,7 +67,7 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <img src="/automated-welding.jpeg" alt="Yaskawa industrial robot welding a steel assembly" />
+        <img src={asset("/automated-welding.jpeg")} alt="Yaskawa industrial robot welding a steel assembly" />
         <div className="hero-shade" />
         <div className="hero-content">
           <p className="eyebrow"><span /> Industrial automation, built around you</p>
@@ -119,7 +122,7 @@ export default function Home() {
         <div className="project-grid">
           {projects.map((project) => (
             <article className={`project ${project.className}`} key={project.title}>
-              <img src={project.image} alt={project.title} />
+              <img src={asset(project.image)} alt={project.title} />
               <div className="project-overlay">
                 <span>{project.tag}</span>
                 <h3>{project.title}</h3>
@@ -131,7 +134,7 @@ export default function Home() {
 
       <section className="process">
         <div className="process-image">
-          <img src="/production-welding-cell.jpeg" alt="Kiaan Robotics welding cell in production" />
+          <img src={asset("/production-welding-cell.jpeg")} alt="Kiaan Robotics welding cell in production" />
           <span>Production-ready systems</span>
         </div>
         <div className="process-copy">
@@ -147,7 +150,7 @@ export default function Home() {
 
       <section className="leadership" id="leadership">
         <div className="leadership-portrait">
-          <img src="/jaydeep-champaneri.jpeg" alt="Jaydeep Champaneri, CEO of Kiaan Robotics" />
+          <img src={asset("/jaydeep-champaneri.jpeg")} alt="Jaydeep Champaneri, CEO of Kiaan Robotics" />
           <div className="leader-label">
             <span>Jaydeep Champaneri</span>
             <small>Chief Executive Officer</small>
@@ -186,7 +189,7 @@ export default function Home() {
 
       <footer>
         <a className="brand footer-brand" href="#top">
-          <img src="/kiaan-robotics-logo.png" alt="Kiaan Robotics and automation solutions" />
+          <img src={asset("/kiaan-robotics-logo.png")} alt="Kiaan Robotics and automation solutions" />
         </a>
         <p>Ahmedabad, Gujarat, India</p>
         <p>© 2026 Kiaan Robotics</p>

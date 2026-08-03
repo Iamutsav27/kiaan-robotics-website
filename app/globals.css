@@ -5,6 +5,8 @@
   --paper: #f2f0e9;
   --orange: #f28a00;
   --line: rgba(22, 23, 22, 0.16);
+  --font-geist-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-geist-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
 * { box-sizing: border-box; }
