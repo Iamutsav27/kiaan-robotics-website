@@ -1,23 +1,28 @@
 const solutions = [
   {
     number: "01",
-    title: "Robotic welding",
-    text: "MIG, TIG and laser welding cells engineered for repeatable quality, higher throughput and safer production.",
+    title: "SPM — Special Purpose Machine",
+    text: "Custom-built automation engineered around your production process, cycle time and floor requirements.",
   },
   {
     number: "02",
-    title: "Machine tending",
+    title: "Machine tending & handling",
     text: "Reliable CNC, press and process-machine loading systems built around your actual cycle and floor layout.",
   },
   {
     number: "03",
-    title: "Handling & assembly",
-    text: "Purpose-built pick-and-place, material handling, gluing and assembly cells that keep production moving.",
+    title: "Assembly & material dispensing",
+    text: "Purpose-built assembly, gluing and material dispensing cells that keep production moving.",
   },
   {
     number: "04",
-    title: "Painting & cutting",
-    text: "Integrated robotic painting, coating and 3D cutting applications for consistent finishes and complex parts.",
+    title: "3D cutting & vision inspection",
+    text: "Integrated 3D cutting and vision inspection applications for consistent quality and complex parts.",
+  },
+  {
+    number: "05",
+    title: "Spray painting & powder coating",
+    text: "Automated spray painting and powder coating systems for repeatable, high-quality finishes.",
   },
 ];
 
@@ -69,19 +74,24 @@ export default function Home() {
       <section className="hero" id="top">
         <img src={asset("/automated-welding.jpeg")} alt="Yaskawa industrial robot welding a steel assembly" />
         <div className="hero-shade" />
+        <div className="industrial-grid" aria-hidden="true" />
+        <div className="weld-glow" aria-hidden="true"><span /></div>
+        <div className="smoke-field" aria-hidden="true"><i /><i /><i /></div>
+        <div className="spark-field" aria-hidden="true">
+          {Array.from({ length: 20 }, (_, index) => <i key={index} />)}
+        </div>
         <div className="hero-content">
           <p className="eyebrow"><span /> Industrial automation, built around you</p>
           <h1>We make<br />production <em>move.</em></h1>
           <p className="hero-copy">Turnkey robotic cells, integration and field support—from first concept to a production-ready system.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#projects">Explore our work <span>↓</span></a>
-            <a className="text-link" href="tel:+919429587411">Talk to an engineer <span>↗</span></a>
+            <a className="text-link" href="tel:+918320019151">Talk to an engineer <span>↗</span></a>
           </div>
         </div>
         <div className="hero-stats" aria-label="Company highlights">
-          <div><strong>50<sup>+</sup></strong><span>Projects delivered</span></div>
+          <div><strong>70<sup>+</sup></strong><span>Projects delivered</span></div>
           <div><strong>24<sup>/7</sup></strong><span>Service support</span></div>
-          <div><strong>01</strong><span>Turnkey partner</span></div>
         </div>
       </section>
 
@@ -150,16 +160,16 @@ export default function Home() {
 
       <section className="leadership" id="leadership">
         <div className="leadership-portrait">
-          <img src={asset("/jaydeep-champaneri.jpeg")} alt="Jaydeep Champaneri, CEO of Kiaan Robotics" />
+          <img src={asset("/jaydeep-champaneri.jpeg")} alt="Jaydip Champaneri, Managing Director of Kiaan Robotics" />
           <div className="leader-label">
-            <span>Jaydeep Champaneri</span>
-            <small>Chief Executive Officer</small>
+            <span>Jaydip Champaneri</span>
+            <small>Managing Director</small>
           </div>
         </div>
         <div className="leadership-copy">
           <p className="section-kicker">Leadership</p>
-          <h2>Engineering confidence,<br /><span>from the factory floor.</span></h2>
-          <p>Under Jaydeep Champaneri’s leadership, Kiaan Robotics brings practical automation engineering, responsive service and long-term accountability to every customer engagement.</p>
+          <h2>Driven by vision.<br /><span>Committed to progress.</span></h2>
+          <p>With 15+ years of experience, Jaydip Champaneri’s leadership brings practical automation engineering, responsive service and long-term accountability to every customer engagement.</p>
           <div className="leadership-values">
             <div><b>Practical</b><span>Solutions shaped by real production needs</span></div>
             <div><b>Accountable</b><span>One team from concept through support</span></div>
@@ -168,8 +178,8 @@ export default function Home() {
       </section>
 
       <section className="partners" aria-label="Technology partners">
-        <p>Technology experience across</p>
-        <div><b>YASKAWA</b><b>FANUC</b><b>KAWASAKI</b><b>MIGATRONIC</b><b>BINZEL</b></div>
+        <p>Technology experience across & authorized partners</p>
+        <div><b>YASKAWA</b><b>FANUC</b><b>KAWASAKI</b><b>MIGATRONIC</b><b>ABICOR BINZEL</b><b>SKS</b><b>LINCOLN</b><b>GYS</b></div>
       </section>
 
       <section className="contact" id="contact">
@@ -181,8 +191,9 @@ export default function Home() {
           <p>Tell us about the part, process or production challenge. Our team will help define the right automation approach.</p>
           <a className="button button-dark" href="mailto:kiaan.robotics@gmail.com">Start a conversation <span>↗</span></a>
           <div className="contact-details">
-            <a href="tel:+919429587411">+91 94295 87411</a>
+            <a href="tel:+918320019151">+91 83200 19151</a>
             <a href="mailto:kiaan.robotics@gmail.com">kiaan.robotics@gmail.com</a>
+            <a style={{ maxWidth: "100%", lineHeight: 1.6 }} href="https://www.google.com/maps/search/?api=1&query=18%2C+Radhe+Krishna+Industrial+Hub%2C+Behind+Hinglaj+Mata+Mandir%2C+Kathwada%2C+Ahmedabad+382430" target="_blank" rel="noopener noreferrer">18, Radhe Krishna Industrial Hub, Behind Hinglaj Mata Mandir, Kathwada, Ahmedabad 382430</a>
           </div>
         </div>
       </section>
@@ -191,7 +202,7 @@ export default function Home() {
         <a className="brand footer-brand" href="#top">
           <img src={asset("/kiaan-robotics-logo.png")} alt="Kiaan Robotics and automation solutions" />
         </a>
-        <p>Ahmedabad, Gujarat, India</p>
+        <p><a href="https://www.google.com/maps/search/?api=1&query=18%2C+Radhe+Krishna+Industrial+Hub%2C+Behind+Hinglaj+Mata+Mandir%2C+Kathwada%2C+Ahmedabad+382430" target="_blank" rel="noopener noreferrer">Kathwada, Ahmedabad 382430</a></p>
         <p>© 2026 Kiaan Robotics</p>
       </footer>
     </main>
