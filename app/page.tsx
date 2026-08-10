@@ -1,8 +1,8 @@
 const solutions = [
   {
     number: "01",
-    title: "SPM — Special Purpose Machine",
-    text: "Custom-built automation engineered around your production process, cycle time and floor requirements.",
+    title: "Robotic welding",
+    text: "MIG, TIG and laser welding cells engineered for repeatable quality, higher throughput and safer production.",
   },
   {
     number: "02",
@@ -24,6 +24,11 @@ const solutions = [
     title: "Spray painting & powder coating",
     text: "Automated spray painting and powder coating systems for repeatable, high-quality finishes.",
   },
+  {
+    number: "06",
+    title: "SPM — Special Purpose Machine",
+    text: "Custom-built automation engineered around your production process, cycle time and floor requirements.",
+  },
 ];
 
 const projects = [
@@ -41,8 +46,8 @@ const projects = [
   },
   {
     image: "/robotic-welding-cell.jpeg",
-    title: "Precision component welding",
-    tag: "ROBOTIC WELDING",
+    title: "Robotic laser welding",
+    tag: "LASER WELDING",
     className: "",
   },
   {
