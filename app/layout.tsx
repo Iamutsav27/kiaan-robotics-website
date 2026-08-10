@@ -10,7 +10,11 @@ const description = "Turnkey robotic welding, machine tending, handling, paintin
 export const metadata: Metadata = {
   title,
   description,
-  icons: { icon: `${basePath}/kiaan-robotics-logo.png`, shortcut: `${basePath}/kiaan-robotics-logo.png` },
+  icons: {
+    icon: [{ url: `${basePath}/favicon.png`, type: "image/png", sizes: "512x512" }],
+    shortcut: `${basePath}/favicon.png`,
+    apple: `${basePath}/favicon.png`,
+  },
   openGraph: { title, description, images: [{ url: socialImage, width: 1200, height: 630 }] },
   twitter: { card: "summary_large_image", title, description, images: [socialImage] },
 };
