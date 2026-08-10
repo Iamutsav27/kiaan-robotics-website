@@ -32,8 +32,8 @@ jobs:
       - name: Build static website
         run: npm run build:pages
         env:
-          NEXT_PUBLIC_BASE_PATH: /kiaan-robotics-website
-          NEXT_PUBLIC_SITE_URL: https://iamutsav27.github.io
+          NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_SITE_URL: https://kiaanrobotics.in
       - name: Upload website artifact
         uses: actions/upload-pages-artifact@v4
         with:
