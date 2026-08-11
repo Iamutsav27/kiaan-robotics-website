@@ -203,6 +203,23 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="whatsapp-widget">
+        <div className="whatsapp-prompt">
+          <small>Kiaan Robotics</small>
+          <b>Connect with us via WhatsApp</b>
+          <span>+91 83200 19151 · Typically replies quickly</span>
+        </div>
+        <a
+          className="whatsapp-button"
+          href="https://wa.me/918320019151?text=Hello%20Kiaan%20Robotics%2C%20I%20would%20like%20to%20discuss%20an%20automation%20project."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Connect with Kiaan Robotics via WhatsApp"
+        >
+          <img src={asset("/whatsapp.svg")} alt="" aria-hidden="true" />
+        </a>
+      </div>
+
       <footer>
         <a className="brand footer-brand" href="#top">
           <img src={asset("/kiaan-robotics-logo.png")} alt="Kiaan Robotics and automation solutions" />
