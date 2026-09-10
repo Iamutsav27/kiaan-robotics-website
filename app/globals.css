@@ -41,14 +41,15 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
   display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
   color: white; transition: background .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
   border-bottom: 1px solid transparent;
+  text-shadow: 0 1px 12px rgba(6,9,10,.55);
 }
 .site-header:before {
   content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none;
-  background: linear-gradient(rgba(6,9,10,.72), rgba(6,9,10,0));
+  background: linear-gradient(rgba(6,9,10,.86), rgba(6,9,10,.34));
   transition: opacity .3s ease;
 }
 .site-header.is-solid {
-  color: var(--ink); background: rgba(242,240,233,.94); backdrop-filter: blur(12px);
+  color: var(--ink); text-shadow: none; background: rgba(242,240,233,.94); backdrop-filter: blur(12px);
   border-bottom-color: var(--line); box-shadow: 0 10px 30px rgba(22,23,22,.07);
 }
 .site-header.is-solid:before { opacity: 0; }
